@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            position: relative;
+            overflow: hidden;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .no {
+            background-color: #808080;
+            color: white;
+            position: relative;
+        }
+        #message {
+            font-size: 22px;
+            color: #ff4d4d;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>"i love you "Do you love me? ❤️</h1>
+        <button class="btn yes" onclick="showLove()">Yes</button>
+        <button class="btn no" id="noButton">No</button>
+        <p id="message"></p>
+    </div>
+    
+    <script>
+        let messages = [
+            "😢 Don't reject me! 😭",
+            "🥺 Please say yes! 💕",
+            "💖 I really love you! 😘",
+            "😢 Think again, please! 💔",
+            "💔 Are you sure? 😭"
+        ];
+        let msgIndex = 0;
+
+        document.getElementById("noButton").addEventListener("click", function() {
+            document.getElementById("message").innerText = messages[msgIndex];
+            msgIndex = (msgIndex + 1) % messages.length;
+        });
+        
+        function showLove() {
+            document.body.innerHTML = "<h1 style='color:#ff4d4d; margin-top:100px;'>You are my world! ❤️ I love you too! 😘</h1>";
+        }
+    </script>
+</body>
+</html>
